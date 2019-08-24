@@ -24,18 +24,12 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
 
 sass:
   sass_dir: _sass
 
-keep_files: 
-  - assets/css
-  - assets/fonts
-  - assets/img
-  - assets/js
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -47,8 +41,3 @@ keep_files:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-exclude:
-  - assets/css
-  - assets/fonts
-  - assets/img
-  - assets/js
