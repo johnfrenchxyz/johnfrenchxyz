@@ -1,0 +1,50 @@
+{#
+  ============================================================
+  COMPONENT: Work Screenshot Showcase
+  Drop {% include "components/work-showcase.njk" %} into
+  src/index.njk wherever you want it.
+
+  TO ADD MORE IMAGES: Copy any ws-frame block below and
+  update the src and alt. CSS handles 3–5 frames gracefully.
+  For each new frame beyond 5, add a matching nth-child rule
+  in main.css (see the pattern in the CSS block below).
+  ============================================================
+#}
+
+<section class="work-showcase">
+  <div class="ws-frames">
+
+    <div class="ws-frame">
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/687e4f12182422571f0d4f56/021231f8-08d7-4fd8-9b49-16489714cf5b/Screenshot+2025-06-30+at+12.06.50%E2%80%AFPM.png"
+        alt="Library of Congress digital collections redesign"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="ws-frame">
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/687e4f12182422571f0d4f56/dfd4e56e-d578-43aa-ae4c-e2cc37dde1bf/Screenshot+2025-06-30+at+12.17.30%E2%80%AFPM.png"
+        alt="VA Healthcare API developer portal"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="ws-frame">
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/687e4f12182422571f0d4f56/1cb5b560-8fa6-43b7-b54b-d59fa933762d/Screenshot+2025-07-21+at+11.15.15%E2%80%AFAM.png"
+        alt="CMS enterprise platform redesign"
+        loading="lazy"
+      />
+    </div>
+
+    {# Add more frames here — just copy a ws-frame block #}
+
+  </div>
+
+  <div class="ws-cta">
+    <a href="/work/" class="btn btn--primary">
+      View my work <span class="ws-cta-arrow">&#8594;</span>
+    </a>
+  </div>
+</section>

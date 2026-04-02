@@ -1,0 +1,101 @@
+---
+layout: base.njk
+---
+
+<article>
+  <!-- Case Study Hero -->
+  <section class="case-study-hero">
+    <div class="container">
+      <div class="case-study-hero__inner">
+        <div>
+          <p class="case-study-hero__eyebrow animate-up delay-1">{{ client }}</p>
+          <h1 class="case-study-hero__title animate-up delay-2">{{ title }}</h1>
+          <p class="case-study-hero__summary animate-up delay-3">{{ summary }}</p>
+          {% if protected %}
+          <p style="margin-top: var(--space-6); font-family: var(--ff-mono); font-size: var(--fs-xs); color: var(--ink-muted); letter-spacing: 0.1em; text-transform: uppercase;">
+            🔒 Password protected · <a href="mailto:{{ site.email }}" style="color: var(--accent);">Request access</a>
+          </p>
+          {% endif %}
+        </div>
+        <div class="case-study-meta animate-up delay-3">
+          {% if role %}<div class="case-study-meta__item">
+            <p class="case-study-meta__label">Role</p>
+            <p class="case-study-meta__value">{{ role }}</p>
+          </div>{% endif %}
+          {% if year %}<div class="case-study-meta__item">
+            <p class="case-study-meta__label">Year</p>
+            <p class="case-study-meta__value">{{ year }}</p>
+          </div>{% endif %}
+          {% if team %}<div class="case-study-meta__item">
+            <p class="case-study-meta__label">Team</p>
+            <p class="case-study-meta__value">{{ team }}</p>
+          </div>{% endif %}
+          {% if outcome %}<div class="case-study-meta__item">
+            <p class="case-study-meta__label">Key Outcome</p>
+            <p class="case-study-meta__value">{{ outcome }}</p>
+          </div>{% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Password Gate + Protected Content -->
+  {% if protected %}
+  <div id="password-gate" class="password-gate" data-hash="{{ passwordHash }}">
+    <div class="password-gate__box">
+      <div class="password-gate__icon">🔒</div>
+      <h2 class="password-gate__title">Protected Case Study</h2>
+      <p class="password-gate__subtitle">
+        This case study is under NDA. Enter the password to view, or
+        <a href="mailto:{{ site.email }}" style="color:var(--accent)">reach out to request access</a>.
+      </p>
+      <div class="password-gate__form">
+        <input
+          type="password"
+          id="gate-password"
+          class="form-input"
+          placeholder="Enter password"
+          autocomplete="current-password"
+          aria-label="Case study password"
+        />
+        <button type="submit" class="btn btn--primary" style="width:100%;" onclick="document.querySelector('.password-gate__form').dispatchEvent(new Event('submit'))">
+          Unlock Case Study
+        </button>
+        <p class="password-gate__error" hidden aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <div id="protected-content" {% if protected %}hidden{% endif %}>
+    {% if heroImage %}
+    <div style="background: var(--paper-warm); border-bottom: 1px solid var(--paper-rule);">
+      <div class="container" style="padding-block: var(--space-8);">
+        <img src="{{ heroImage }}" alt="{{ title }}" style="width:100%; border: 1px solid var(--paper-rule);" />
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="case-study-body">
+      <div class="container">
+        <div class="case-study-layout">
+          <div class="case-study-content reveal">
+            {{ content | safe }}
+          </div>
+          {% if toc %}
+          <aside class="case-study-sidebar">
+            <nav class="sidebar-nav">
+              <p class="sidebar-nav__title">On this page</p>
+              <ul class="sidebar-nav__list" role="list">
+                {% for item in toc %}
+                <li><a href="#{{ item.id }}" class="sidebar-nav__link">{{ item.label }}</a></li>
+                {% endfor %}
+              </ul>
+            </nav>
+          </aside>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

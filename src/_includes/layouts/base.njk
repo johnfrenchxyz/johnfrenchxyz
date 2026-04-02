@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ description or site.siteDescription }}" />
+  <title>{% if title %}{{ title }} — {% endif %}{{ site.siteName }}</title>
+
+  <!-- Fonts: Playfair Display (editorial serif) + DM Sans (clean body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/main.css" />
+  {% block head %}{% endblock %}
+</head>
+<body class="{{ bodyClass }}">
+
+  <!-- Grain texture overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="/" class="nav__logo" aria-label="John French — Home">
+        <span class="nav__logo-name">John French</span>
+        <span class="nav__logo-title">Product Design Director</span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <ul class="nav__links" role="list">
+        <li><a href="/work/" class="nav__link {% if page.url.startsWith('/work') %}nav__link--active{% endif %}">Work</a></li>
+        <li><a href="/about/" class="nav__link {% if page.url == '/about/' %}nav__link--active{% endif %}">About</a></li>
+        <li><a href="/contact/" class="nav__link {% if page.url == '/contact/' %}nav__link--active{% endif %}">Contact</a></li>
+        <li><a href="{{ site.resumeUrl }}" class="nav__link nav__link--cta" target="_blank" rel="noopener">Résumé ↗</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <p class="footer__name">John French</p>
+        <p class="footer__tagline">Product Design Director</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="{{ site.resumeUrl }}" target="_blank" rel="noopener">Résumé ↗</a>
+      </nav>
+      <p class="footer__copy">© {{ "" | year }} John French. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
