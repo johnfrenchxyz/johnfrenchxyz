@@ -45,7 +45,7 @@ toc:
   <li>Leveraged analytics to identify drop-off and engagement points across public-facing sites as a starting place for targeted research.</li>
   <li>Conducted an accessibility and content audit of high‑traffic pages (based on page views) to prioritize features and resources.</li>
   <li>Led discovery research with current and prospective partner organizations to surface developer integration pain points and bottlenecks.</li>
-  <li>Performed in-depth qualitative interviews with CMS stakeholders to identify opportunities for cross‑unit data integration.</li>
+  <li>Performed in-depth qualitative interviews with stakeholders to identify opportunities for cross‑unit data integration.</li>
 </ul>
 
 <p>
@@ -126,5 +126,5 @@ toc:
 
 <ul class="feature-list">
   <li>Partnered with a dedicated Developer Evangelist to capture developer needs and elevate them into the product roadmap.</li>
-  <li>Led ecosystem-wide knowledge sharing through Scrum of Scrums, fostering communication across API teams and CMS programs.</li>
+  <li>Led ecosystem-wide knowledge sharing through Scrum of Scrums, fostering communication across API teams and programs.</li>
 </ul>
