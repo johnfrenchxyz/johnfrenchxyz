@@ -28,14 +28,6 @@ toc:
   <li>How might we try to improve people’s ability to share their healthcare information while also ensuring they understand what data they are sharing, and the risks involved?</li>
 </ul>
 
-<p>
-  The existing site (shown here) lacked responsive or mobile-first design. Additional, components like the image slider lacked visible controls and the various colors throughout the site were confusing and illogical due to their haphazard use.
-</p>
-
-<p>
-  Lastly, as you can see in the screenshot, there were two levels of horizontal navigation, which confused users, especially as they navigated deeper into departmental sites. We knew that we would need to completely rethink the navigation paradigm.
-</p>
-
 <h2 id="approach">Approach</h2>
 
 <h3>Start with Research</h3>
@@ -47,7 +39,7 @@ toc:
 </ul>
 
 <p>
-    The authorization screen (shown here) used in testing revealed multiple design improvements that needed to be made. Despite this simple, one-screen UI - the implications of getting this content wrong could risk users facing unintended consequences sharing extremely personal and private medical information.
+    The authorization screen used in testing revealed multiple design improvements that needed to be made. Despite this simple, one-screen UI - the implications of getting this content wrong could risk users facing unintended consequences sharing extremely personal and private medical information.
 </p>
 
 <h3>Research Results</h3>

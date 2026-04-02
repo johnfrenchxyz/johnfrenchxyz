@@ -1,11 +1,11 @@
 ---
 layout: case-study.njk
 title: Modernizing Compliance Through Automation & Service Design
-client: Department of Veterans Affairs
+client: State Government Agency
 role: UX Design Lead / Product Design Director
 year: 2022–2024
-team: 8 designers, 3 researchers, cross-functional with engineering & policy
-outcome: 40% increase in API adoption; WCAG AA compliance across all endpoints
+team: 2 designers, 2 engineers
+outcome: Identified an automated pathway to compliance for 48% of impacted population
 summary: Leading a delivery team tasked with a high-stakes compliance mandate in order to help hundreds of thousands of people keep their healthcare.
 heroImage: "/images/hr1/hr1-figma-ui.png"
 toc:
